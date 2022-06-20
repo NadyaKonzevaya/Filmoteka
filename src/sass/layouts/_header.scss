@@ -1,0 +1,31 @@
+.header {
+    position: relative;
+
+    width: 100%;
+    padding-top: 44px;
+    background-color: $background-color;
+    background-image: url("/src/images/header/header_mobile.jpg");
+    background-size: cover;
+    background-position: center;
+   
+    @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url('/src/images/header/header_mobile-x2.jpg');
+        }
+
+    @media screen and (min-width: 320px) {
+            height: 230px;
+            @include sectionPadding(44px, 44px);
+        }
+    
+        // @media screen and (min-width: 768px) {
+        //     @include sectionPadding(102px, 173px);
+        //     height: 399px;
+        // }
+    
+        // @media screen and (min-width: 1280px) {
+        //     @include sectionPadding(171px, 292px);
+        //     height: 665px;
+        // }
+}
